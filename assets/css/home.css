@@ -1,0 +1,163 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+} 
+
+
+/* the heading */
+
+#heading{
+    text-align: center;
+    color: grey;
+    font-size: 35px;
+}
+
+/* the main section */
+
+#main-section{
+    height: auto;
+    width: 500px;
+    /* background-color: black; */
+    position: absolute;
+    left: 34%;
+    top: 15%;
+}
+
+/* the description bar */
+
+#description-container{
+    height: auto;
+    width: 100%;
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    margin: 0px;
+}
+
+#description-container:hover{
+    background-color: lightgray;
+}
+input[type=text] {
+   border-style: none;
+   width: 100%;
+   height: 40px;
+   outline: none;
+   font-size: 15px;
+   background-color: inherit;
+   margin: 0px;
+}
+
+/* the category dropdown */
+
+#category-container{
+    width: 49%;
+    height: 87px;
+    border-bottom: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+    display: inline-block;
+    margin: 0px;
+}
+
+
+#category-container:hover{
+    background-color: lightgray;
+}
+
+select{
+    width: 100%;
+    height: 30px;
+    border-style: none;
+    outline: none;
+    background-color: inherit;
+    font-size: 15px;
+}
+
+/* the add task button */
+#add-task{
+    font-size: 20px;
+    background-color: purple;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 150px;
+    margin-top: 15px;
+    width: 200px;
+}
+
+/* the delete task button */
+
+#delete-task{
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 125px;
+    margin-top: 15px;
+    width: 250px;
+}
+
+/* the due date */
+
+#due-date-container{
+    width: 49%;
+    height: auto;
+    border-bottom: 2px solid lightgray;
+    display: inline-block;
+    margin: 0px;
+    margin-left: -3px;
+}
+
+#due-date-container:hover{
+    background-color: lightgray;
+}
+
+input[type=date] {
+    border-style: none;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    font-size: 15px;
+    background-color: inherit;
+    margin: 0px;
+ }
+ 
+/* displaying the tasks */
+
+.todo-task{
+    height: auto;
+    width: 100%;
+    border-top: 2px solid lightgray;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details{
+   display: inline-block;
+   margin-top: 15px; 
+   font-size: 20px;
+   width: 350px;
+}
+
+/* modifying the checkbox */
+input.largerCheckbox { 
+    width: 30px; 
+    height: 30px; 
+    margin-left: 10px;
+    margin-top: 15px;
+} 
+
+.category-detail{
+    height: 50px; 
+    width: 90px;
+    display: inline-block;
+    background-color: purple;
+    text-align: center;
+    font-size: 15px;
+    vertical-align: middle;
+    line-height: 50px;  
+    color: white;
+    margin-top: -20px;
+}

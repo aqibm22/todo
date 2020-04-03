@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity=
+    "sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div id="heading">
+        <p>TODO App</p>
+    </div>
+    <div id="main-section">
+        <form action="/create-todo" method="POST">
+            <div id="description-container">
+                <p>DESCRIPTION</p>
+                <input type="text" name="description" placeholder="What do you need to do?" required>
+            </div>
+            <div id="category-container">
+                <p>CATEGORY</p>
+                <select name="category" required>
+                    <option value="PERSONAL">Personal</option>
+                    <option value="WORK">Work</option>
+                    <option value="SCHOOL">School</option>
+                    <option value="OTHER">Other</option>
+                </select>
+            </div>
+            <div id="due-date-container">
+                <p>DUE DATE</p>
+                <input type="date" name="duedate">
+            </div>
+
+            <button type="submit" id="add-task">
+                <i class="fas fa-plus"></i>
+                <span>ADD TASK</span>
+            </button>
+        </form>
+        <br>
+        <form action="/delete-todo" method="POST">
+            <button type="submit" id="delete-task">
+                <i class="fas fa-trash-alt"></i>
+                <span>DELETE TASKS</span>
+            </button>
+            <% for(let i of todo_list) {%>
+                <div class="todo-task">
+                    <input type="checkbox" name="deleteid" value="<%= i._id %>" class="largerCheckbox">
+                    <label for="deleteid"> 
+                        <div class="details">
+                            <span> <%=  i.description %></span> <br> 
+                            <i class="fas fa-calendar-alt"></i>
+                            <span><%= i.duedate %></span>
+                        </div>
+                        <div class="category-detail">
+                                <span><%= i.category %></span>
+                        </div>
+                    </label>
+                </div>
+            <% } %>
+        </form>
+        
+    </div>
+</body>
+</html>
